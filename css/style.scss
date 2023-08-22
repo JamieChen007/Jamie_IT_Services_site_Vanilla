@@ -279,12 +279,13 @@ body {
     align-items: center;
     height: 25rem;
     & i {
-      color: $themcolor;
+      color: $colorlblue;
       font-size: 5rem;
     }
     & h2 {
-      color: #015b86;
+      color: $colorlblue;
       font-size: 2rem;
+      text-align: center;
     }
     & p {
       font-family: "Poppins", Sans-serif;
@@ -749,7 +750,7 @@ body {
   }
 }
 
-.consultantDesc {
+.contentDescBlock {
   width: 80%;
   margin: 5rem auto;
   display: flex;
@@ -763,7 +764,7 @@ body {
     font-size: 2.5rem;
     color: $themcolor;
   }
-  .consultantDetail {
+  .contentDescDetail {
     display: flex;
     & h4 {
       font-size: 2rem;
@@ -804,12 +805,19 @@ body {
   }
 }
 
-.consultantsPicContainer {
+.contentPic {
   margin: 3rem auto;
   width: 80%;
   height: 30rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.supportContentPic {
+  background-image: url("https://www.essentialit.com.au/wp-content/uploads/2022/06/small-business-it-support-sydney.webp");
+}
+
+.consultantContentPic {
   background-image: url("https://www.essentialit.com.au/wp-content/uploads/2019/05/it_consulting.jpg.webp");
 }

@@ -273,12 +273,13 @@ body {
   height: 25rem;
 }
 .chooseReasons .chooseReason i {
-  color: #015b86;
+  color: #37b2dd;
   font-size: 5rem;
 }
 .chooseReasons .chooseReason h2 {
-  color: #015b86;
+  color: #37b2dd;
   font-size: 2rem;
+  text-align: center;
 }
 .chooseReasons .chooseReason p {
   font-family: "Poppins", Sans-serif;
@@ -731,42 +732,42 @@ body {
   transform: scale(0.98);
 }
 
-.consultantDesc {
+.contentDescBlock {
   width: 80%;
   margin: 5rem auto;
   display: flex;
   flex-direction: column;
   border-top: 1px solid darkgray;
 }
-.consultantDesc h3 {
+.contentDescBlock h3 {
   font-size: 3rem;
   color: #37b2dd;
 }
-.consultantDesc h2 {
+.contentDescBlock h2 {
   font-size: 2.5rem;
   color: #015b86;
 }
-.consultantDesc .consultantDetail {
+.contentDescBlock .contentDescDetail {
   display: flex;
 }
-.consultantDesc .consultantDetail h4 {
+.contentDescBlock .contentDescDetail h4 {
   font-size: 2rem;
   color: #015b86;
 }
-.consultantDesc .consultantDetail p {
+.contentDescBlock .contentDescDetail p {
   font-size: 1.5rem;
   color: darkgray;
 }
-.consultantDesc .consultantDetail div {
+.contentDescBlock .contentDescDetail div {
   width: 50%;
   padding: 0 1rem;
 }
-.consultantDesc .consultantDetail div ul {
+.contentDescBlock .contentDescDetail div ul {
   list-style: none;
   font-size: 1.5rem;
   color: #555;
 }
-.consultantDesc .consultantDetail .contactUsBtn {
+.contentDescBlock .contentDescDetail .contactUsBtn {
   background-color: #37b2dd;
   width: 20%;
   height: 3rem;
@@ -775,22 +776,29 @@ body {
   align-items: center;
   border-radius: 10px;
 }
-.consultantDesc .consultantDetail .contactUsBtn a {
+.contentDescBlock .contentDescDetail .contactUsBtn a {
   font-size: 1.2rem;
   text-decoration: none;
   color: white;
   text-transform: capitalize;
 }
-.consultantDesc .consultantDetail .contactUsBtn:hover, .consultantDesc .consultantDetail .contactUsBtn:active {
+.contentDescBlock .contentDescDetail .contactUsBtn:hover, .contentDescBlock .contentDescDetail .contactUsBtn:active {
   background-color: #015b86;
 }
 
-.consultantsPicContainer {
+.contentPic {
   margin: 3rem auto;
   width: 80%;
   height: 30rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.supportContentPic {
+  background-image: url("https://www.essentialit.com.au/wp-content/uploads/2022/06/small-business-it-support-sydney.webp");
+}
+
+.consultantContentPic {
   background-image: url("https://www.essentialit.com.au/wp-content/uploads/2019/05/it_consulting.jpg.webp");
 }
