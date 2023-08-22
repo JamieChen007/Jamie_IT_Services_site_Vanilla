@@ -789,9 +789,9 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.5rem;
       border-radius: 10px;
       & a {
+        font-size: 1.2rem;
         text-decoration: none;
         color: $colorwht;
         text-transform: capitalize;
