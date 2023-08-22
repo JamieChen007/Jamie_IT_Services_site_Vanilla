@@ -1,0 +1,796 @@
+@import "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+:root {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 3000px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: barlow, sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  max-width: 3000px;
+  position: fixed;
+  height: 8rem;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #015b86;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.navbar.active {
+  height: 6rem;
+  background-color: white;
+}
+.navbar.active .sitename a {
+  color: black;
+}
+.navbar.active .navbarLink a {
+  color: black;
+}
+.navbar.active .navbarLink a:hover {
+  color: #015b86;
+}
+.navbar.active .navdropdownContainer a:hover {
+  color: white;
+}
+
+.navbarLink {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  right: 15rem;
+  height: 100%;
+  text-transform: capitalize;
+}
+.navbarLink .navbarLinkList {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+}
+.navbarLink a {
+  text-decoration: none;
+  color: white;
+  margin: 1rem;
+  padding: 0 1rem;
+}
+.navbarLink a:hover, .navbarLink a:active {
+  color: black;
+}
+
+.navdropdownContainer {
+  height: 100%;
+  position: relative;
+  margin: 1rem;
+}
+.navdropdownContainer:hover {
+  background-color: #37b2dd;
+}
+.navdropdownContainer .navServices {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.navDropdownList {
+  display: none;
+  position: absolute;
+  width: 30rem;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.navDropdownList li {
+  display: flex;
+  flex-direction: column;
+  background-color: #37b2dd;
+}
+.navDropdownList li a {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid white;
+}
+.navDropdownList.open {
+  display: block;
+}
+
+.navbarLink .navbarChosen {
+  color: black;
+}
+
+.navbar.active .navbarLink .navbarChosen {
+  color: #015b86;
+}
+
+.sitename {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: white;
+  position: absolute;
+  left: 15rem;
+  cursor: pointer;
+}
+.sitename a {
+  text-decoration: none;
+  color: white;
+}
+.sitename a:hover {
+  color: black;
+  transition: color 1s ease;
+}
+
+.homePic {
+  background-image: url("https://www.essentialit.com.au/wp-content/uploads/2022/05/business-it-services-sydney.jpeg");
+}
+
+.aboutUsPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2019/05/shutterstock_141093727_hero_1_1919x559_acf_cropped.jpg);
+}
+
+.contactUsPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2023/03/Cyber-Security-Consultants-Sydney-4-scaled.jpg);
+}
+
+.consultantsPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2019/05/shutterstock_1039039435_it_consulting_1919x559_acf_cropped.jpg);
+}
+
+.mainContent {
+  width: 100%;
+  transform: none;
+}
+
+.picContainer {
+  margin: 0;
+  margin-top: 8rem;
+  width: 100%;
+  height: 60rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.picContainer h1 {
+  font-weight: 1000;
+  color: white;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+}
+.picContainer h2 {
+  color: white;
+  font-size: 2.8rem;
+  line-height: 1.1em;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.picContainer p {
+  width: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.1em;
+}
+
+.quoteBtn {
+  background: #37b2dd;
+  color: white;
+  width: 20rem;
+  height: 5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.quoteBtn:active, .quoteBtn:hover {
+  background: #337ab7;
+}
+
+.surveyQuestions {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  height: 30rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surveyQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+.surveyQuestion .surveyQuestionDetail,
+.surveyQuestion .answerOption {
+  margin: 0.5rem 0;
+}
+.surveyQuestion .surveyQuestionDetail input,
+.surveyQuestion .answerOption input {
+  zoom: 1.5;
+}
+.surveyQuestion.hide {
+  display: none;
+}
+.surveyQuestion .contactForm {
+  margin: 0 auto;
+  width: 100%;
+}
+.surveyQuestion .contactForm input {
+  height: 2rem;
+  width: 100%;
+}
+.surveyQuestion .contactForm fieldset {
+  width: 100%;
+}
+.surveyQuestion .contactForm fieldset div {
+  width: 50%;
+}
+.surveyQuestion .contactForm fieldset div input {
+  width: 100%;
+}
+.surveyQuestion .contactForm fieldset div textArea {
+  height: 8rem;
+  width: 200%;
+}
+
+.chooseReasons {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 25rem;
+}
+.chooseReasons .chooseReason {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+}
+.chooseReasons .chooseReason i {
+  color: #015b86;
+  font-size: 5rem;
+}
+.chooseReasons .chooseReason h2 {
+  color: #015b86;
+  font-size: 2rem;
+}
+.chooseReasons .chooseReason p {
+  font-family: "Poppins", Sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  color: darkgray;
+}
+
+.article {
+  width: 80%;
+  margin: auto;
+}
+.article h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  -webkit-text-stroke: 2px #015b86;
+  -webkit-text-fill-color: transparent;
+}
+.article p {
+  font-size: 1.5rem;
+}
+
+.workWithReasons {
+  margin: auto;
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  background-color: #e8f1f6;
+}
+.workWithReasons .subTitle {
+  color: #37b2dd;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.workWithReasons .workWithReasonsQuestion {
+  font-size: 3rem;
+  color: #015b86;
+}
+.workWithReasons .workWithReasonCtn {
+  display: flex;
+  justify-content: space-evenly;
+}
+.workWithReasons .workWithReasonCtn .workWithReason {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+}
+.workWithReasons .workWithReasonCtn .workWithReason i {
+  color: #37b2dd;
+  font-size: 5rem;
+}
+.workWithReasons .workWithReasonCtn .workWithReason h2 {
+  color: #015b86;
+  font-size: 2rem;
+}
+.workWithReasons .workWithReasonCtn .workWithReason p {
+  font-family: "Poppins", Sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: darkgray;
+}
+
+.socialMedia {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  height: 25rem;
+}
+
+.twitter,
+.youtube,
+.facebook {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.twitterlogo {
+  color: #5da9dd;
+  margin: 1.2rem;
+}
+
+.youtubelogo {
+  color: #ff0000;
+  margin: 1.2rem;
+}
+
+.facebooklogo {
+  color: #1877f2;
+  margin: 1.2rem;
+}
+
+.twitterFollowers,
+.youtubeFollowers,
+.facebookFollowers {
+  font-size: 2.5rem;
+  margin: 1.2rem;
+}
+
+.twitterDes,
+.youtubeDes,
+.facebookDes {
+  font-size: 1.5rem;
+  margin: 1.2rem;
+}
+
+.foot {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.aboutUsInfo {
+  width: 70%;
+  font-size: 2rem;
+  padding: 4rem;
+  color: darkgray;
+  margin: auto;
+  font-weight: 500;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+  border-bottom: 1px solid black;
+}
+
+.teamMembers {
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  transform: none;
+}
+
+.teamMember {
+  height: 20rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #015b86;
+  border-radius: 2rem;
+  margin: 3rem;
+  box-shadow: 1px 1px 3px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.teamMember:hover {
+  box-shadow: 10px 10px 10px;
+}
+.teamMember:nth-of-type(odd) {
+  transform: translateX(400%);
+}
+.teamMember:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+.teamMember.show {
+  transform: translateX(0);
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 0.5rem solid #2a2a72;
+  height: 10rem;
+  width: 10rem;
+  margin: 3rem;
+}
+
+.teamMemberInfo {
+  padding: 0 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.teamMemberInfo .teamMemberName {
+  font-size: 3rem;
+}
+.teamMemberInfo .teamMemberTitle {
+  font-size: 2.5rem;
+}
+.teamMemberInfo .teamMemberLinkedin, .teamMemberInfo .teamMemberBlog, .teamMemberInfo .teamMemberGithub {
+  font-size: 2.5rem;
+  color: #0a66c2;
+  margin: 0.5rem;
+}
+.teamMemberInfo .teamMemberLink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contactUsInfo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+
+.contactForm {
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contactForm h2 {
+  font-size: 2rem;
+  color: darkgray;
+}
+.contactForm p {
+  font-size: 1.5rem;
+  color: gray;
+}
+.contactForm .contactFormInput {
+  width: 100%;
+  font-size: 1.8rem;
+}
+.contactForm .contactFormInput label {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.contactForm .contactFormInput label::after {
+  content: "*";
+  color: red;
+  margin-left: 0.5rem;
+}
+.contactForm .contactFormInput .formSubmit input {
+  border: 0;
+  background-color: #015b86;
+  color: white;
+  font-weight: 400;
+  height: 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.contactForm .contactFormInput .formSubmit input:hover, .contactForm .contactFormInput .formSubmit input:active {
+  background-color: #02415c;
+}
+.contactForm .contactFormInput input {
+  background-color: #f5f8fa;
+  width: 20rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border: none;
+}
+.contactForm .contactFormInput input:focus {
+  outline: none;
+  border: 1px solid;
+  border-color: rgba(82, 126, 238, 0.8);
+}
+.contactForm .contactFormInput textArea {
+  border: none;
+  background-color: #f5f8fa;
+  width: 40rem;
+  font-size: 2rem;
+}
+.contactForm .contactFormInput textArea:focus {
+  outline: none;
+  border: 1px solid;
+  border-color: rgba(82, 126, 238, 0.8);
+}
+.contactForm .contactFormInput fieldset {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.contactForm .contactFormInput fieldset div {
+  display: flex;
+  flex-direction: column;
+}
+.contactForm .contactFormInput fieldset div:first-child {
+  margin-right: 2rem;
+}
+
+.borderNone {
+  border: none;
+}
+
+.companyDetails {
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.companyDetails h2 {
+  font-size: 2rem;
+  color: darkgray;
+}
+.companyDetails p {
+  font-size: 1.5rem;
+  color: gray;
+}
+.companyDetails a {
+  text-decoration: none;
+  color: #015b86;
+}
+
+.contactSlogan {
+  height: 20rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contactSlogan::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-color: rgba(5, 90, 133, 0.86);
+}
+.contactSlogan h3 {
+  z-index: 999;
+  font-size: 3rem;
+  font-family: "AvenirLTStd65Medium_5175";
+  color: white;
+}
+.contactSlogan h3 span {
+  color: rgba(255, 255, 255, 0.77);
+  font-family: "AvenirLTStdLight";
+  font-style: italic;
+}
+.contactSlogan .phoneBtn {
+  margin: 1rem;
+  z-index: 999;
+  border: 0;
+  background-color: #3ebee9;
+  color: white;
+  font-weight: 400;
+  height: 5rem;
+  width: 20rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.contactSlogan .phoneBtn:hover, .contactSlogan .phoneBtn:active {
+  background-color: rgba(62, 190, 233, 0.7);
+}
+.contactSlogan .phoneBtn a {
+  color: white;
+  text-decoration: none;
+}
+
+.survey {
+  background-color: #e8f1f6;
+  width: 100%;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.survey h2 {
+  font-size: 2rem;
+  color: #015b86;
+}
+.survey h4 {
+  font-size: 2.2rem;
+  color: black;
+  font-weight: 300;
+}
+
+.stepContainer {
+  display: flex;
+  justify-content: center;
+}
+.stepContainer .stepCurrent {
+  border: 0.25rem solid #015b86;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: 1s ease-in;
+}
+.stepContainer .step {
+  border: 0.25rem solid #e0e0e0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: 1s ease-in;
+}
+.stepContainer .line {
+  background-color: darkgray;
+  width: 6rem;
+  height: 0.4rem;
+  margin: auto;
+  transition: 1s ease-in;
+}
+.stepContainer .lineLink {
+  background-color: #015b86;
+  width: 6rem;
+  height: 0.4rem;
+  margin: auto;
+  transition: 1s ease-in;
+}
+
+.button_container {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.button_container .step_button {
+  background-color: darkgray;
+  cursor: not-allowed;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  border: none;
+  color: white;
+}
+.button_container .step_button_active {
+  background-color: #015b86;
+  cursor: pointer;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  border: none;
+  color: white;
+}
+.button_container .step_button_active:active {
+  transform: scale(0.98);
+}
+
+.consultantDesc {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid darkgray;
+}
+.consultantDesc h3 {
+  font-size: 3rem;
+  color: #37b2dd;
+}
+.consultantDesc h2 {
+  font-size: 2.5rem;
+  color: #015b86;
+}
+.consultantDesc .consultantDetail {
+  display: flex;
+}
+.consultantDesc .consultantDetail h4 {
+  font-size: 2rem;
+  color: #015b86;
+}
+.consultantDesc .consultantDetail p {
+  font-size: 1.5rem;
+  color: darkgray;
+}
+.consultantDesc .consultantDetail div {
+  width: 50%;
+  padding: 0 1rem;
+}
+.consultantDesc .consultantDetail div ul {
+  list-style: none;
+  font-size: 1.5rem;
+  color: #555;
+}
+.consultantDesc .consultantDetail .contactUsBtn {
+  background-color: #37b2dd;
+  width: 20%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+.consultantDesc .consultantDetail .contactUsBtn a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+}
+.consultantDesc .consultantDetail .contactUsBtn:hover, .consultantDesc .consultantDetail .contactUsBtn:active {
+  background-color: #015b86;
+}
+
+.consultantsPicContainer {
+  margin: 3rem auto;
+  width: 80%;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("https://www.essentialit.com.au/wp-content/uploads/2019/05/it_consulting.jpg.webp");
+}

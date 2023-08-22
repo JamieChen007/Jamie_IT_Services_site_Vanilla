@@ -1,0 +1,815 @@
+@import "https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+$colorblk: black;
+$colorred: red;
+$colorwht: white;
+$colordgray: darkgray;
+$themcolor: #015b86;
+$colorlblue: #37b2dd;
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 3000px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: barlow, sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  max-width: 3000px;
+  position: fixed;
+  height: 8rem;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: $themcolor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.navbar.active {
+  height: 6rem;
+  background-color: $colorwht;
+  & .sitename a {
+    color: $colorblk;
+  }
+  & .navbarLink a {
+    color: $colorblk;
+    &:hover {
+      color: $themcolor;
+    }
+  }
+  & .navdropdownContainer a:hover {
+    color: $colorwht;
+  }
+}
+
+.navbarLink {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  right: 15rem;
+  height: 100%;
+  text-transform: capitalize;
+  & .navbarLinkList {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+  }
+  & a {
+    text-decoration: none;
+    color: $colorwht;
+    margin: 1rem;
+    padding: 0 1rem;
+    &:hover,
+    &:active {
+      color: $colorblk;
+    }
+  }
+}
+
+.navdropdownContainer {
+  height: 100%;
+  position: relative;
+  margin: 1rem;
+  &:hover {
+    background-color: $colorlblue;
+  }
+  .navServices {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.navDropdownList {
+  display: none;
+  position: absolute;
+  width: 30rem;
+  padding-inline-start: 0;
+  & li {
+    display: flex;
+    flex-direction: column;
+    background-color: $colorlblue;
+    & a {
+      font-size: 1.8rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid $colorwht;
+    }
+  }
+  &.open {
+    display: block;
+  }
+}
+
+.navbarLink .navbarChosen {
+  color: $colorblk;
+}
+
+.navbar.active .navbarLink .navbarChosen {
+  color: $themcolor;
+}
+
+.sitename {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: $colorwht;
+  position: absolute;
+  left: 15rem;
+  cursor: pointer;
+  & a {
+    text-decoration: none;
+    color: $colorwht;
+    &:hover {
+      color: $colorblk;
+      transition: color 1s ease;
+    }
+  }
+}
+
+.homePic {
+  background-image: url("https://www.essentialit.com.au/wp-content/uploads/2022/05/business-it-services-sydney.jpeg");
+}
+
+.aboutUsPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2019/05/shutterstock_141093727_hero_1_1919x559_acf_cropped.jpg);
+}
+
+.contactUsPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2023/03/Cyber-Security-Consultants-Sydney-4-scaled.jpg);
+}
+
+.consultantsPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2019/05/shutterstock_1039039435_it_consulting_1919x559_acf_cropped.jpg);
+}
+
+.mainContent {
+  width: 100%;
+  transform: none;
+}
+
+.picContainer {
+  margin: 0;
+  margin-top: 8rem;
+  width: 100%;
+  height: 60rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $colorwht;
+  & h1 {
+    font-weight: 1000;
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+  }
+  & h2 {
+    color: white;
+    font-size: 2.8rem;
+    line-height: 1.1em;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  & p {
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.1em;
+  }
+}
+
+.quoteBtn {
+  background: $colorlblue;
+  color: white;
+  width: 20rem;
+  height: 5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  &:active,
+  &:hover {
+    background: #337ab7;
+  }
+}
+
+.surveyQuestions {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  height: 30rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surveyQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  .surveyQuestionDetail,
+  .answerOption {
+    margin: 0.5rem 0;
+    & input {
+      zoom: 1.5;
+    }
+  }
+  &.hide {
+    display: none;
+  }
+  & .contactForm {
+    margin: 0 auto;
+    width: 100%;
+
+    & input {
+      height: 2rem;
+      width: 100%;
+    }
+    & fieldset {
+      width: 100%;
+      & div {
+        width: 50%;
+        & input {
+          width: 100%;
+        }
+        & textArea {
+          height: 8rem;
+          width: 200%;
+        }
+      }
+    }
+  }
+}
+
+.chooseReasons {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 25rem;
+  .chooseReason {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    & i {
+      color: $themcolor;
+      font-size: 5rem;
+    }
+    & h2 {
+      color: #015b86;
+      font-size: 2rem;
+    }
+    & p {
+      font-family: "Poppins", Sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-align: center;
+      color: $colordgray;
+    }
+  }
+}
+
+//article
+.article {
+  width: 80%;
+  margin: auto;
+  & h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    -webkit-text-stroke: 2px $themcolor;
+    -webkit-text-fill-color: transparent;
+  }
+  & p {
+    font-size: 1.5rem;
+  }
+}
+
+.workWithReasons {
+  margin: auto;
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  background-color: #e8f1f6;
+  .subTitle {
+    color: $colorlblue;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .workWithReasonsQuestion {
+    font-size: 3rem;
+    color: #015b86;
+  }
+  .workWithReasonCtn {
+    display: flex;
+    justify-content: space-evenly;
+    .workWithReason {
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 25rem;
+      & i {
+        color: $colorlblue;
+        font-size: 5rem;
+      }
+      & h2 {
+        color: #015b86;
+        font-size: 2rem;
+      }
+      & p {
+        font-family: "Poppins", Sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        color: $colordgray;
+      }
+    }
+  }
+}
+
+// social media
+
+.socialMedia {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  height: 25rem;
+}
+
+.twitter,
+.youtube,
+.facebook {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+@mixin socialMediaMargin {
+  margin: 1.2rem;
+}
+
+.twitterlogo {
+  color: #5da9dd;
+  @include socialMediaMargin;
+}
+.youtubelogo {
+  color: #ff0000;
+  @include socialMediaMargin;
+}
+.facebooklogo {
+  color: #1877f2;
+  @include socialMediaMargin;
+}
+
+.twitterFollowers,
+.youtubeFollowers,
+.facebookFollowers {
+  font-size: 2.5rem;
+  @include socialMediaMargin;
+}
+
+.twitterDes,
+.youtubeDes,
+.facebookDes {
+  font-size: 1.5rem;
+  @include socialMediaMargin;
+}
+
+.foot {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.aboutUsInfo {
+  width: 70%;
+  font-size: 2rem;
+  padding: 4rem;
+  color: $colordgray;
+  margin: auto;
+  font-weight: 500;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+  border-bottom: 1px solid $colorblk;
+}
+
+// team member
+.teamMembers {
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  transform: none;
+}
+
+.teamMember {
+  height: 20rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid $themcolor;
+  border-radius: 2rem;
+  margin: 3rem;
+  box-shadow: 1px 1px 3px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 10px 10px 10px;
+  }
+  &:nth-of-type(odd) {
+    transform: translateX(400%);
+  }
+  &:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+  &.show {
+    transform: translateX(0);
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 0.5rem solid #2a2a72;
+  height: 10rem;
+  width: 10rem;
+  margin: 3rem;
+}
+
+.teamMemberInfo {
+  padding: 0 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & .teamMemberName {
+    font-size: 3rem;
+  }
+  & .teamMemberTitle {
+    font-size: 2.5rem;
+  }
+  & .teamMemberLinkedin,
+  & .teamMemberBlog,
+  & .teamMemberGithub {
+    font-size: 2.5rem;
+    color: #0a66c2;
+    margin: 0.5rem;
+  }
+  & .teamMemberLink {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.contactUsInfo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+
+@mixin contactUsColumn {
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contactForm {
+  @include contactUsColumn;
+  & h2 {
+    font-size: 2rem;
+    color: $colordgray;
+  }
+  & p {
+    font-size: 1.5rem;
+    color: gray;
+  }
+
+  & .contactFormInput {
+    width: 100%;
+    font-size: 1.8rem;
+    & label {
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      &::after {
+        content: "*";
+        color: $colorred;
+        margin-left: 0.5rem;
+      }
+    }
+
+    & .formSubmit input {
+      border: 0;
+      background-color: $themcolor;
+      color: $colorwht;
+      font-weight: 400;
+      height: 5rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      text-transform: capitalize;
+      &:hover,
+      &:active {
+        background-color: #02415c;
+      }
+    }
+
+    & input {
+      background-color: #f5f8fa;
+      width: 20rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      border: none;
+      &:focus {
+        outline: none;
+        border: 1px solid;
+        border-color: rgba(82, 126, 238, 0.8);
+      }
+    }
+
+    & textArea {
+      border: none;
+      background-color: #f5f8fa;
+      width: 40rem;
+      font-size: 2rem;
+      &:focus {
+        outline: none;
+        border: 1px solid;
+        border-color: rgba(82, 126, 238, 0.8);
+      }
+    }
+
+    & fieldset {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        &:first-child {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.borderNone {
+  border: none;
+}
+
+.companyDetails {
+  @include contactUsColumn;
+  & h2 {
+    font-size: 2rem;
+    color: $colordgray;
+  }
+  & p {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  & a {
+    text-decoration: none;
+    color: $themcolor;
+  }
+}
+
+.contactSlogan {
+  height: 20rem;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: rgba(5, 90, 133, 0.86);
+  }
+  & h3 {
+    z-index: 999;
+    font-size: 3rem;
+    font-family: "AvenirLTStd65Medium_5175";
+    color: $colorwht;
+    & span {
+      color: rgba(255, 255, 1255, 0.77);
+      font-family: "AvenirLTStdLight";
+      font-style: italic;
+    }
+  }
+  & .phoneBtn {
+    margin: 1rem;
+    z-index: 999;
+    border: 0;
+    background-color: #3ebee9;
+    color: $colorwht;
+    font-weight: 400;
+    height: 5rem;
+    width: 20rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      background-color: rgba(62, 190, 233, 0.7);
+    }
+    & a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.survey {
+  background-color: #e8f1f6;
+  width: 100%;
+  height: 60rem;
+  // padding: 3rem 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & h2 {
+    font-size: 2rem;
+    color: $themcolor;
+  }
+  & h4 {
+    font-size: 2.2rem;
+    color: $colorblk;
+    font-weight: 300;
+  }
+}
+
+.stepContainer {
+  display: flex;
+  justify-content: center;
+  @mixin stepNUmber {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: 1s ease-in;
+  }
+  .stepCurrent {
+    border: 0.25rem solid $themcolor;
+    @include stepNUmber();
+  }
+  .step {
+    border: 0.25rem solid #e0e0e0;
+    @include stepNUmber();
+  }
+  @mixin stepLine {
+    width: 6rem;
+    height: 0.4rem;
+    margin: auto;
+    transition: 1s ease-in;
+  }
+  .line {
+    background-color: $colordgray;
+    @include stepLine();
+  }
+  .lineLink {
+    background-color: $themcolor;
+    @include stepLine();
+  }
+}
+
+.button_container {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  @mixin stepBtn {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    border: none;
+    color: $colorwht;
+  }
+  .step_button {
+    background-color: $colordgray;
+    cursor: not-allowed;
+    @include stepBtn();
+  }
+  .step_button_active {
+    background-color: $themcolor;
+    cursor: pointer;
+    @include stepBtn();
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+.consultantDesc {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $colordgray;
+  & h3 {
+    font-size: 3rem;
+    color: $colorlblue;
+  }
+  & h2 {
+    font-size: 2.5rem;
+    color: $themcolor;
+  }
+  .consultantDetail {
+    display: flex;
+    & h4 {
+      font-size: 2rem;
+      color: $themcolor;
+    }
+    & p {
+      font-size: 1.5rem;
+      color: $colordgray;
+    }
+    & div {
+      width: 50%;
+      padding: 0 1rem;
+      & ul {
+        list-style: none;
+        font-size: 1.5rem;
+        color: #555;
+      }
+    }
+    .contactUsBtn {
+      background-color: $colorlblue;
+      width: 20%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      & a {
+        text-decoration: none;
+        color: $colorwht;
+        text-transform: capitalize;
+      }
+      &:hover,
+      &:active {
+        background-color: $themcolor;
+      }
+    }
+  }
+}
+
+.consultantsPicContainer {
+  margin: 3rem auto;
+  width: 80%;
+  height: 30rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("https://www.essentialit.com.au/wp-content/uploads/2019/05/it_consulting.jpg.webp");
+}
