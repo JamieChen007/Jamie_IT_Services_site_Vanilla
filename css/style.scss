@@ -36,11 +36,11 @@ body {
   transition: all 1s ease;
   .sitename {
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: $colorwht;
     position: absolute;
     left: 15rem;
-    width: calc(30% - 15rem);
+    width: calc(40% - 15rem);
     cursor: pointer;
     & a {
       text-decoration: none;
@@ -68,11 +68,14 @@ body {
   & .navdropdownContainer a:hover {
     color: $colorwht;
   }
+  & .navbarLink .navbarChosen {
+    color: $themcolor;
+  }
 }
 
 .navbarLink {
-  width: calc(70% - 15rem);
-  font-size: 2rem;
+  width: calc(60% - 15rem);
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 0.2rem;
   position: absolute;
@@ -90,19 +93,22 @@ body {
   & a {
     text-decoration: none;
     color: $colorwht;
-    margin: 1rem;
-    padding: 0 1rem;
+    margin: 0.5rem;
+    padding: 0 0.3rem;
     &:hover,
     &:active {
       color: $colorblk;
     }
+  }
+  & .navbarChosen {
+    color: $colorblk;
   }
 }
 
 .navdropdownContainer {
   height: 100%;
   position: relative;
-  margin: 1rem;
+  margin: 0.5rem;
   &:hover {
     background-color: $colorlblue;
   }
@@ -124,22 +130,14 @@ body {
     flex-direction: column;
     background-color: $colorlblue;
     & a {
-      font-size: 1.8rem;
-      padding: 1rem 0;
+      font-size: 1.5rem;
+      padding: 0.5rem 0;
       border-bottom: 1px solid $colorwht;
     }
   }
   &.open {
     display: block;
   }
-}
-
-.navbarLink .navbarChosen {
-  color: $colorblk;
-}
-
-.navbar.active .navbarLink .navbarChosen {
-  color: $themcolor;
 }
 
 .homePic {
@@ -179,12 +177,12 @@ body {
   & h1 {
     font-weight: 1000;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 0.3rem;
   }
   & h2 {
     color: white;
-    font-size: 2.8rem;
+    font-size: 2rem;
     line-height: 1.1em;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -192,7 +190,7 @@ body {
   & p {
     width: 50%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.1em;
   }
 }
@@ -202,7 +200,7 @@ body {
   color: white;
   width: 20rem;
   height: 5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,56 +212,6 @@ body {
   &:active,
   &:hover {
     background: #337ab7;
-  }
-}
-
-.surveyQuestions {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  height: 30rem;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.surveyQuestion {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 100%;
-  .surveyQuestionDetail,
-  .answerOption {
-    margin: 0.5rem 0;
-    & input {
-      zoom: 1.5;
-    }
-  }
-  &.hide {
-    display: none;
-  }
-  & .contactForm {
-    margin: 0 auto;
-    width: 100%;
-
-    & input {
-      height: 2rem;
-      width: 100%;
-    }
-    & fieldset {
-      width: 100%;
-      & div {
-        width: 50%;
-        & input {
-          width: 100%;
-        }
-        & textArea {
-          height: 8rem;
-          width: 200%;
-        }
-      }
-    }
   }
 }
 
@@ -282,16 +230,16 @@ body {
     height: 25rem;
     & i {
       color: $colorlblue;
-      font-size: 5rem;
+      font-size: 4rem;
     }
     & h2 {
       color: $colorlblue;
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-align: center;
     }
     & p {
       font-family: "Poppins", Sans-serif;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 400;
       text-align: center;
       color: $colordgray;
@@ -304,13 +252,13 @@ body {
   width: 80%;
   margin: auto;
   & h2 {
-    font-size: 3rem;
-    line-height: 3rem;
-    -webkit-text-stroke: 2px $themcolor;
+    font-size: 2rem;
+    line-height: 2rem;
+    -webkit-text-stroke: 1px $themcolor;
     -webkit-text-fill-color: transparent;
   }
   & p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -326,12 +274,13 @@ body {
   background-color: #e8f1f6;
   .subTitle {
     color: $colorlblue;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
   }
   .workWithReasonsQuestion {
-    font-size: 3rem;
-    color: #015b86;
+    font-size: 2rem;
+    color: $themcolor;
+    // margin: 1rem 0;
   }
   .workWithReasonCtn {
     display: flex;
@@ -345,15 +294,15 @@ body {
       height: 25rem;
       & i {
         color: $colorlblue;
-        font-size: 5rem;
+        font-size: 4rem;
       }
       & h2 {
         color: #015b86;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       & p {
         font-family: "Poppins", Sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 400;
         text-align: center;
         color: $colordgray;
@@ -370,71 +319,66 @@ body {
   display: flex;
   justify-content: space-around;
   height: 25rem;
-}
-
-.twitter,
-.youtube,
-.facebook {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
-
-@mixin socialMediaMargin {
-  margin: 1.2rem;
-}
-
-.twitterlogo {
-  color: #5da9dd;
-  @include socialMediaMargin;
-}
-.youtubelogo {
-  color: #ff0000;
-  @include socialMediaMargin;
-}
-.facebooklogo {
-  color: #1877f2;
-  @include socialMediaMargin;
-}
-
-.twitterFollowers,
-.youtubeFollowers,
-.facebookFollowers {
-  font-size: 2.5rem;
-  @include socialMediaMargin;
-}
-
-.twitterDes,
-.youtubeDes,
-.facebookDes {
-  font-size: 1.5rem;
-  @include socialMediaMargin;
+  .twitter,
+  .youtube,
+  .facebook {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+  @mixin socialMediaMargin {
+    margin: 1.2rem;
+  }
+  .twitterlogo {
+    color: #5da9dd;
+    @include socialMediaMargin;
+  }
+  .youtubelogo {
+    color: #ff0000;
+    @include socialMediaMargin;
+  }
+  .facebooklogo {
+    color: #1877f2;
+    @include socialMediaMargin;
+  }
+  .twitterFollowers,
+  .youtubeFollowers,
+  .facebookFollowers {
+    font-size: 2.5rem;
+    @include socialMediaMargin;
+  }
+  .twitterDes,
+  .youtubeDes,
+  .facebookDes {
+    font-size: 1.2rem;
+    @include socialMediaMargin;
+  }
 }
 
 .foot {
   text-align: center;
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .aboutUsInfo {
   width: 70%;
-  font-size: 2rem;
-  padding: 4rem;
+  font-size: 1.5rem;
+  padding: 2rem;
   color: $colordgray;
   margin: auto;
   font-weight: 500;
-  line-height: 3rem;
-  letter-spacing: 0.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
   border-bottom: 1px solid $colorblk;
 }
 
 // team member
 .teamMembers {
   width: 80%;
-  margin: 2rem auto;
+  margin: auto;
   display: grid;
   grid-template-columns: 50% 50%;
   transform: none;
@@ -447,7 +391,7 @@ body {
   align-items: center;
   border: 1px solid $themcolor;
   border-radius: 2rem;
-  margin: 3rem;
+  margin: 1rem;
   box-shadow: 1px 1px 3px;
   transition: transform 0.4s ease;
   cursor: pointer;
@@ -463,34 +407,40 @@ body {
   &.show {
     transform: translateX(0);
   }
-}
-
-.avatar {
-  border-radius: 50%;
-  border: 0.5rem solid #2a2a72;
-  height: 10rem;
-  width: 10rem;
-  margin: 3rem;
+  .avatar {
+    border-radius: 50%;
+    border: 0.5rem solid #2a2a72;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+  }
 }
 
 .teamMemberInfo {
-  padding: 0 2rem;
+  padding: 0 1rem;
   width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   & .teamMemberName {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 400;
   }
   & .teamMemberTitle {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    &::before {
+      content: "Position:";
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
   }
   & .teamMemberLinkedin,
   & .teamMemberBlog,
   & .teamMemberGithub {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #0a66c2;
-    margin: 0.5rem;
+    margin: 0.3rem;
   }
   & .teamMemberLink {
     display: flex;
@@ -517,17 +467,17 @@ body {
 .contactForm {
   @include contactUsColumn;
   & h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: $colordgray;
   }
   & p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: gray;
   }
 
   & .contactFormInput {
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     & label {
       text-transform: capitalize;
       margin-bottom: 1rem;
@@ -543,7 +493,6 @@ body {
       background-color: $themcolor;
       color: $colorwht;
       font-weight: 400;
-      height: 5rem;
       border-radius: 1rem;
       cursor: pointer;
       text-transform: capitalize;
@@ -556,8 +505,8 @@ body {
     & input {
       background-color: #f5f8fa;
       width: 20rem;
-      height: 3rem;
-      font-size: 1.5rem;
+      height: 2rem;
+      font-size: 1.2rem;
       border: none;
       &:focus {
         outline: none;
@@ -570,7 +519,7 @@ body {
       border: none;
       background-color: #f5f8fa;
       width: 40rem;
-      font-size: 2rem;
+      font-size: 1.2rem;
       &:focus {
         outline: none;
         border: 1px solid;
@@ -603,11 +552,11 @@ body {
 .companyDetails {
   @include contactUsColumn;
   & h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: $colordgray;
   }
   & p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: gray;
   }
   & a {
@@ -633,7 +582,7 @@ body {
   }
   & h3 {
     z-index: 999;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: "AvenirLTStd65Medium_5175";
     color: $colorwht;
     & span {
@@ -651,7 +600,7 @@ body {
     font-weight: 400;
     height: 5rem;
     width: 20rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -678,13 +627,60 @@ body {
   justify-content: center;
   align-items: center;
   & h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: $themcolor;
   }
   & h4 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: $colorblk;
     font-weight: 300;
+  }
+  .surveyQuestions {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
+    height: 30rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.surveyQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  .surveyQuestionDetail,
+  .answerOption {
+    margin: 0.5rem 0;
+    & input {
+      zoom: 1.5;
+    }
+  }
+  &.hide {
+    display: none;
+  }
+  & .contactForm {
+    margin: 0 auto;
+    width: 100%;
+    & input {
+      width: 100%;
+    }
+    & fieldset {
+      width: 100%;
+      & div {
+        width: 50%;
+        & input {
+          width: 100%;
+        }
+        & textArea {
+          height: 8rem;
+          width: 200%;
+        }
+      }
+    }
   }
 }
 
@@ -692,13 +688,13 @@ body {
   display: flex;
   justify-content: center;
   @mixin stepNUmber {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 4rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: 1s ease-in;
   }
   .stepCurrent {
@@ -710,8 +706,8 @@ body {
     @include stepNUmber();
   }
   @mixin stepLine {
-    width: 6rem;
-    height: 0.4rem;
+    width: 5rem;
+    height: 0.1rem;
     margin: auto;
     transition: 1s ease-in;
   }
@@ -733,7 +729,7 @@ body {
     width: 8rem;
     height: 3rem;
     border-radius: 5px;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     border: none;
     color: $colorwht;
   }
@@ -749,31 +745,34 @@ body {
     &:active {
       transform: scale(0.98);
     }
+    &:hover {
+      background-color: $colorlblue;
+    }
   }
 }
 
 .contentDescBlock {
   width: 80%;
-  margin: 5rem auto;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   border-top: 1px solid $colordgray;
   & h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: $colorlblue;
   }
   & h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: $themcolor;
   }
   .contentDescDetail {
     display: flex;
     & h4 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: $themcolor;
     }
     & p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: $colordgray;
     }
     & div {
@@ -781,7 +780,7 @@ body {
       padding: 0 1rem;
       & ul {
         list-style: none;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #555;
       }
     }
@@ -794,7 +793,7 @@ body {
       align-items: center;
       border-radius: 10px;
       & a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
         color: $colorwht;
         text-transform: capitalize;
@@ -808,9 +807,9 @@ body {
 }
 
 .contentPic {
-  margin: 3rem auto;
+  margin: 2rem auto;
   width: 80%;
-  height: 30rem;
+  height: 20rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

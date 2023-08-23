@@ -102,7 +102,7 @@ function render() {
       <img src="${member.avaUrl}" alt="${member.name}" class="avatar">
       <div class="teamMemberInfo">
         <div class="teamMemberName"><span>${member.name}</span></div>
-        <div class="teamMemberTitle"><span>Position:${member.title}</span></div>
+        <div class="teamMemberTitle"><span>${member.title}</span></div>
         <div class="teamMemberLink">
           <a
             href=${member.linkedinUrl}

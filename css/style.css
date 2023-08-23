@@ -30,11 +30,11 @@ body {
 }
 .navbar .sitename {
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   position: absolute;
   left: 15rem;
-  width: calc(30% - 15rem);
+  width: calc(40% - 15rem);
   cursor: pointer;
 }
 .navbar .sitename a {
@@ -62,10 +62,13 @@ body {
 .navbar.active .navdropdownContainer a:hover {
   color: white;
 }
+.navbar.active .navbarLink .navbarChosen {
+  color: #015b86;
+}
 
 .navbarLink {
-  width: calc(70% - 15rem);
-  font-size: 2rem;
+  width: calc(60% - 15rem);
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 0.2rem;
   position: absolute;
@@ -84,17 +87,20 @@ body {
 .navbarLink a {
   text-decoration: none;
   color: white;
-  margin: 1rem;
-  padding: 0 1rem;
+  margin: 0.5rem;
+  padding: 0 0.3rem;
 }
 .navbarLink a:hover, .navbarLink a:active {
+  color: black;
+}
+.navbarLink .navbarChosen {
   color: black;
 }
 
 .navdropdownContainer {
   height: 100%;
   position: relative;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 .navdropdownContainer:hover {
   background-color: #37b2dd;
@@ -119,20 +125,12 @@ body {
   background-color: #37b2dd;
 }
 .navDropdownList li a {
-  font-size: 1.8rem;
-  padding: 1rem 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
   border-bottom: 1px solid white;
 }
 .navDropdownList.open {
   display: block;
-}
-
-.navbarLink .navbarChosen {
-  color: black;
-}
-
-.navbar.active .navbarLink .navbarChosen {
-  color: #015b86;
 }
 
 .homePic {
@@ -173,12 +171,12 @@ body {
 .picContainer h1 {
   font-weight: 1000;
   color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 0.3rem;
 }
 .picContainer h2 {
   color: white;
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 1.1em;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -186,7 +184,7 @@ body {
 .picContainer p {
   width: 50%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.1em;
 }
 
@@ -195,7 +193,7 @@ body {
   color: white;
   width: 20rem;
   height: 5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,56 +205,6 @@ body {
 }
 .quoteBtn:active, .quoteBtn:hover {
   background: #337ab7;
-}
-
-.surveyQuestions {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-  height: 30rem;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.surveyQuestion {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 100%;
-}
-.surveyQuestion .surveyQuestionDetail,
-.surveyQuestion .answerOption {
-  margin: 0.5rem 0;
-}
-.surveyQuestion .surveyQuestionDetail input,
-.surveyQuestion .answerOption input {
-  zoom: 1.5;
-}
-.surveyQuestion.hide {
-  display: none;
-}
-.surveyQuestion .contactForm {
-  margin: 0 auto;
-  width: 100%;
-}
-.surveyQuestion .contactForm input {
-  height: 2rem;
-  width: 100%;
-}
-.surveyQuestion .contactForm fieldset {
-  width: 100%;
-}
-.surveyQuestion .contactForm fieldset div {
-  width: 50%;
-}
-.surveyQuestion .contactForm fieldset div input {
-  width: 100%;
-}
-.surveyQuestion .contactForm fieldset div textArea {
-  height: 8rem;
-  width: 200%;
 }
 
 .chooseReasons {
@@ -276,16 +224,16 @@ body {
 }
 .chooseReasons .chooseReason i {
   color: #37b2dd;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .chooseReasons .chooseReason h2 {
   color: #37b2dd;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 .chooseReasons .chooseReason p {
   font-family: "Poppins", Sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
   color: darkgray;
@@ -296,13 +244,13 @@ body {
   margin: auto;
 }
 .article h2 {
-  font-size: 3rem;
-  line-height: 3rem;
-  -webkit-text-stroke: 2px #015b86;
+  font-size: 2rem;
+  line-height: 2rem;
+  -webkit-text-stroke: 1px #015b86;
   -webkit-text-fill-color: transparent;
 }
 .article p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .workWithReasons {
@@ -318,11 +266,11 @@ body {
 }
 .workWithReasons .subTitle {
   color: #37b2dd;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 .workWithReasons .workWithReasonsQuestion {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #015b86;
 }
 .workWithReasons .workWithReasonCtn {
@@ -339,15 +287,15 @@ body {
 }
 .workWithReasons .workWithReasonCtn .workWithReason i {
   color: #37b2dd;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .workWithReasons .workWithReasonCtn .workWithReason h2 {
   color: #015b86;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .workWithReasons .workWithReasonCtn .workWithReason p {
   font-family: "Poppins", Sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
   color: darkgray;
@@ -360,67 +308,61 @@ body {
   justify-content: space-around;
   height: 25rem;
 }
-
-.twitter,
-.youtube,
-.facebook {
+.socialMedia .twitter,
+.socialMedia .youtube,
+.socialMedia .facebook {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
-
-.twitterlogo {
+.socialMedia .twitterlogo {
   color: #5da9dd;
   margin: 1.2rem;
 }
-
-.youtubelogo {
+.socialMedia .youtubelogo {
   color: #ff0000;
   margin: 1.2rem;
 }
-
-.facebooklogo {
+.socialMedia .facebooklogo {
   color: #1877f2;
   margin: 1.2rem;
 }
-
-.twitterFollowers,
-.youtubeFollowers,
-.facebookFollowers {
+.socialMedia .twitterFollowers,
+.socialMedia .youtubeFollowers,
+.socialMedia .facebookFollowers {
   font-size: 2.5rem;
   margin: 1.2rem;
 }
-
-.twitterDes,
-.youtubeDes,
-.facebookDes {
-  font-size: 1.5rem;
+.socialMedia .twitterDes,
+.socialMedia .youtubeDes,
+.socialMedia .facebookDes {
+  font-size: 1.2rem;
   margin: 1.2rem;
 }
 
 .foot {
   text-align: center;
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .aboutUsInfo {
   width: 70%;
-  font-size: 2rem;
-  padding: 4rem;
+  font-size: 1.5rem;
+  padding: 2rem;
   color: darkgray;
   margin: auto;
   font-weight: 500;
-  line-height: 3rem;
-  letter-spacing: 0.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
   border-bottom: 1px solid black;
 }
 
 .teamMembers {
   width: 80%;
-  margin: 2rem auto;
+  margin: auto;
   display: grid;
   grid-template-columns: 50% 50%;
   transform: none;
@@ -433,7 +375,7 @@ body {
   align-items: center;
   border: 1px solid #015b86;
   border-radius: 2rem;
-  margin: 3rem;
+  margin: 1rem;
   box-shadow: 1px 1px 3px;
   transition: transform 0.4s ease;
   cursor: pointer;
@@ -450,32 +392,38 @@ body {
 .teamMember.show {
   transform: translateX(0);
 }
-
-.avatar {
+.teamMember .avatar {
   border-radius: 50%;
   border: 0.5rem solid #2a2a72;
   height: 10rem;
   width: 10rem;
-  margin: 3rem;
+  margin: 1rem;
 }
 
 .teamMemberInfo {
-  padding: 0 2rem;
+  padding: 0 1rem;
   width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .teamMemberInfo .teamMemberName {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 .teamMemberInfo .teamMemberTitle {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.teamMemberInfo .teamMemberTitle::before {
+  content: "Position:";
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .teamMemberInfo .teamMemberLinkedin, .teamMemberInfo .teamMemberBlog, .teamMemberInfo .teamMemberGithub {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #0a66c2;
-  margin: 0.5rem;
+  margin: 0.3rem;
 }
 .teamMemberInfo .teamMemberLink {
   display: flex;
@@ -498,16 +446,16 @@ body {
   justify-content: flex-start;
 }
 .contactForm h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: darkgray;
 }
 .contactForm p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: gray;
 }
 .contactForm .contactFormInput {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 .contactForm .contactFormInput label {
   text-transform: capitalize;
@@ -523,7 +471,6 @@ body {
   background-color: #015b86;
   color: white;
   font-weight: 400;
-  height: 5rem;
   border-radius: 1rem;
   cursor: pointer;
   text-transform: capitalize;
@@ -534,8 +481,8 @@ body {
 .contactForm .contactFormInput input {
   background-color: #f5f8fa;
   width: 20rem;
-  height: 3rem;
-  font-size: 1.5rem;
+  height: 2rem;
+  font-size: 1.2rem;
   border: none;
 }
 .contactForm .contactFormInput input:focus {
@@ -547,7 +494,7 @@ body {
   border: none;
   background-color: #f5f8fa;
   width: 40rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 .contactForm .contactFormInput textArea:focus {
   outline: none;
@@ -582,11 +529,11 @@ body {
   justify-content: flex-start;
 }
 .companyDetails h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: darkgray;
 }
 .companyDetails p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: gray;
 }
 .companyDetails a {
@@ -612,7 +559,7 @@ body {
 }
 .contactSlogan h3 {
   z-index: 999;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "AvenirLTStd65Medium_5175";
   color: white;
 }
@@ -630,7 +577,7 @@ body {
   font-weight: 400;
   height: 5rem;
   width: 20rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -655,13 +602,61 @@ body {
   align-items: center;
 }
 .survey h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #015b86;
 }
 .survey h4 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: black;
   font-weight: 300;
+}
+.survey .surveyQuestions {
+  font-size: 1.5rem;
+  margin: 0.2rem 0;
+  height: 30rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surveyQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+.surveyQuestion .surveyQuestionDetail,
+.surveyQuestion .answerOption {
+  margin: 0.5rem 0;
+}
+.surveyQuestion .surveyQuestionDetail input,
+.surveyQuestion .answerOption input {
+  zoom: 1.5;
+}
+.surveyQuestion.hide {
+  display: none;
+}
+.surveyQuestion .contactForm {
+  margin: 0 auto;
+  width: 100%;
+}
+.surveyQuestion .contactForm input {
+  width: 100%;
+}
+.surveyQuestion .contactForm fieldset {
+  width: 100%;
+}
+.surveyQuestion .contactForm fieldset div {
+  width: 50%;
+}
+.surveyQuestion .contactForm fieldset div input {
+  width: 100%;
+}
+.surveyQuestion .contactForm fieldset div textArea {
+  height: 8rem;
+  width: 200%;
 }
 
 .stepContainer {
@@ -670,37 +665,37 @@ body {
 }
 .stepContainer .stepCurrent {
   border: 0.25rem solid #015b86;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 4rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: 1s ease-in;
 }
 .stepContainer .step {
   border: 0.25rem solid #e0e0e0;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 4rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: 1s ease-in;
 }
 .stepContainer .line {
   background-color: darkgray;
-  width: 6rem;
-  height: 0.4rem;
+  width: 5rem;
+  height: 0.1rem;
   margin: auto;
   transition: 1s ease-in;
 }
 .stepContainer .lineLink {
   background-color: #015b86;
-  width: 6rem;
-  height: 0.4rem;
+  width: 5rem;
+  height: 0.1rem;
   margin: auto;
   transition: 1s ease-in;
 }
@@ -716,7 +711,7 @@ body {
   width: 8rem;
   height: 3rem;
   border-radius: 5px;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   border: none;
   color: white;
 }
@@ -726,38 +721,41 @@ body {
   width: 8rem;
   height: 3rem;
   border-radius: 5px;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   border: none;
   color: white;
 }
 .button_container .step_button_active:active {
   transform: scale(0.98);
 }
+.button_container .step_button_active:hover {
+  background-color: #37b2dd;
+}
 
 .contentDescBlock {
   width: 80%;
-  margin: 5rem auto;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   border-top: 1px solid darkgray;
 }
 .contentDescBlock h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #37b2dd;
 }
 .contentDescBlock h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #015b86;
 }
 .contentDescBlock .contentDescDetail {
   display: flex;
 }
 .contentDescBlock .contentDescDetail h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #015b86;
 }
 .contentDescBlock .contentDescDetail p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: darkgray;
 }
 .contentDescBlock .contentDescDetail div {
@@ -766,7 +764,7 @@ body {
 }
 .contentDescBlock .contentDescDetail div ul {
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #555;
 }
 .contentDescBlock .contentDescDetail .contactUsBtn {
@@ -779,7 +777,7 @@ body {
   border-radius: 10px;
 }
 .contentDescBlock .contentDescDetail .contactUsBtn a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
   color: white;
   text-transform: capitalize;
@@ -789,9 +787,9 @@ body {
 }
 
 .contentPic {
-  margin: 3rem auto;
+  margin: 2rem auto;
   width: 80%;
-  height: 30rem;
+  height: 20rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
