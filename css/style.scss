@@ -34,6 +34,23 @@ body {
   justify-content: center;
   align-items: center;
   transition: all 1s ease;
+  .sitename {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: $colorwht;
+    position: absolute;
+    left: 15rem;
+    width: calc(30% - 15rem);
+    cursor: pointer;
+    & a {
+      text-decoration: none;
+      color: $colorwht;
+      &:hover {
+        color: $colorblk;
+        transition: color 1s ease;
+      }
+    }
+  }
 }
 
 .navbar.active {
@@ -54,6 +71,7 @@ body {
 }
 
 .navbarLink {
+  width: calc(70% - 15rem);
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.2rem;
@@ -65,6 +83,7 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: end;
     margin: 0;
     height: 100%;
   }
@@ -121,23 +140,6 @@ body {
 
 .navbar.active .navbarLink .navbarChosen {
   color: $themcolor;
-}
-
-.sitename {
-  font-weight: 800;
-  font-size: 2.5rem;
-  color: $colorwht;
-  position: absolute;
-  left: 15rem;
-  cursor: pointer;
-  & a {
-    text-decoration: none;
-    color: $colorwht;
-    &:hover {
-      color: $colorblk;
-      transition: color 1s ease;
-    }
-  }
 }
 
 .homePic {
