@@ -1,4 +1,4 @@
-let navbar = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
   if (this.window.scrollY > navbar.offsetHeight + 150) {

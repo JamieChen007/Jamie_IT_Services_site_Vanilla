@@ -1,4 +1,4 @@
-let teamMember = document.querySelectorAll(".teamMember");
+const teamMember = document.querySelectorAll(".teamMember");
 
 const moduleShow = () => {
   const triggerBottom = (window.innerHeight / 4) * 3;

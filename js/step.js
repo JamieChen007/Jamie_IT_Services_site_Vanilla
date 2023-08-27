@@ -1,9 +1,9 @@
-let stepNumber = document.getElementsByName("step_number");
-let stepLine = document.getElementsByName("step_line");
-let surveyQuestion = document.querySelectorAll(".surveyQuestion");
+const stepNumber = document.getElementsByName("step_number");
+const stepLine = document.getElementsByName("step_line");
+const surveyQuestion = document.querySelectorAll(".surveyQuestion");
 
-let preBtn = document.getElementById("prev");
-let nextBtn = document.getElementById("next");
+const preBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
 let stepNum = 0;
 

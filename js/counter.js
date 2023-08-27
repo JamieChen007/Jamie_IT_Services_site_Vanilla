@@ -6,7 +6,7 @@ let currNum;
 let target;
 
 const count = (currNum, target, el) => {
-  let interval = setInterval(function () {
+  let interval = setInterval(() => {
     currNum++;
     el.innerHTML = currNum;
     if (currNum === target) {

@@ -1,5 +1,4 @@
 const teamMembers = document.querySelector(".teamMembers");
-const APIURL = "https://api.github.com/users/";
 
 const MEMBER_INFO = [
   {
@@ -93,7 +92,7 @@ const MEMBER_INFO = [
   },
 ];
 
-function render() {
+(() => {
   MEMBER_INFO.map((member) => {
     const teamMember = document.createElement("div");
     teamMember.className = "teamMember";
@@ -131,6 +130,4 @@ function render() {
 
     teamMembers.appendChild(teamMember);
   });
-}
-
-render();
+})();
