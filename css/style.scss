@@ -160,6 +160,14 @@ body {
   background-image: url(https://www.essentialit.com.au/wp-content/uploads/2019/05/shutterstock_664638928_it_backup_1919x559_acf_cropped.jpg);
 }
 
+.managedITPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2021/07/essential-it-header-image.webp);
+}
+
+.itProcumentPic {
+  background-image: url(https://www.essentialit.com.au/wp-content/uploads/2019/05/shutterstock_156997538_1919x559_acf_cropped.jpg);
+}
+
 .mainContent {
   width: 100%;
 }
@@ -287,12 +295,15 @@ body {
   }
   .workWithReasonCtn {
     display: flex;
+
     justify-content: space-evenly;
     .workWithReason {
+      width: 33.33%;
+      padding-top: 2rem;
       margin: 0 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       height: 25rem;
       & i {
@@ -818,7 +829,8 @@ body {
   background-position: center center;
 }
 
-.supportContentPic {
+.supportContentPic,
+.managedITContentPic {
   background-image: url("https://www.essentialit.com.au/wp-content/uploads/2022/06/small-business-it-support-sydney.webp");
 }
 
@@ -828,4 +840,8 @@ body {
 
 .backupContentPic {
   background-image: url("https://www.essentialit.com.au/wp-content/uploads/2019/05/it_backup_solutions-1024x350.jpg.webp");
+}
+
+.procurementContentPic {
+  background-image: url("https://www.essentialit.com.au/wp-content/uploads/2019/05/it_equipment_procurement.jpg.webp");
 }
