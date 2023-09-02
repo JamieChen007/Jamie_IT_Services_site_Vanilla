@@ -15,7 +15,7 @@ $colorlblue: #37b2dd;
 }
 
 body {
-  max-width: 3000px;
+  max-width: 1950px;
   margin: 0 auto;
   padding: 0;
   font-family: barlow, sans-serif;
@@ -23,7 +23,7 @@ body {
 }
 
 .navbar {
-  max-width: 3000px;
+  max-width: 1950px;
   position: fixed;
   height: 8rem;
   top: 0;
@@ -99,7 +99,8 @@ body {
       align-items: center;
     }
     &.hide {
-      display: none;
+      width: 0;
+      visibility: hidden;
     }
     &.mobile {
       display: flex;
@@ -107,9 +108,11 @@ body {
       flex-direction: column;
       align-items: flex-start;
       top: 8rem;
-      height: 200px;
+      height: 10rem;
       width: 100vw;
       background-color: $colorlblue;
+      visibility: visible;
+      transition: height 1s ease-in-out;
       .navLinkListCtn,
       .navdropdownContainer {
         height: 3rem;
@@ -182,10 +185,12 @@ body {
 }
 
 .navDropdownList {
-  display: none;
+  opacity: 0;
   position: absolute;
   width: 30rem;
+  height: 800px;
   padding-inline-start: 0;
+  visibility: hidden;
   & li {
     display: flex;
     flex-direction: column;
@@ -197,7 +202,9 @@ body {
     }
   }
   &.open {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s ease-in-out;
   }
 }
 
@@ -231,26 +238,39 @@ body {
 
 .mainContent {
   width: 100%;
+  margin-top: 8rem;
 }
 
 .picContainer {
   margin: 0;
-  margin-top: 8rem;
+  position: relative;
   width: 100%;
   height: 37.5rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: 100% center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: $colorwht;
+  z-index: -1;
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.53);
+    z-index: 0;
+  }
   & h1 {
     font-weight: 1000;
     color: white;
     font-size: 3rem;
     letter-spacing: 0.3rem;
+    z-index: 1;
   }
   & h2 {
     color: white;
@@ -258,12 +278,14 @@ body {
     line-height: 1.1em;
     text-align: center;
     margin-bottom: 0.5rem;
+    z-index: 1;
   }
   & p {
     width: 50%;
     text-align: center;
     font-size: 1.2rem;
     line-height: 1.1em;
+    z-index: 1;
   }
 }
 
@@ -281,6 +303,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  z-index: 1;
   &:active,
   &:hover {
     background: #337ab7;
@@ -701,14 +724,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   & h2 {
     font-size: 1.8rem;
     color: $themcolor;
+    text-align: center;
   }
   & h4 {
     font-size: 2rem;
     color: $colorblk;
     font-weight: 300;
+    text-align: center;
   }
   .surveyQuestions {
     font-size: 1.5rem;
@@ -861,12 +887,13 @@ body {
     }
     .contactUsBtn {
       background-color: $colorlblue;
-      width: 20%;
+      width: 10rem;
       height: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
+      cursor: pointer;
       & a {
         font-size: 1rem;
         text-decoration: none;
@@ -907,7 +934,26 @@ body {
   background-image: url("https://www.essentialit.com.au/wp-content/uploads/2019/05/it_equipment_procurement.jpg.webp");
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1650px) {
+  .navbar .sitename {
+    left: 10rem;
+    width: calc(40% - 10rem);
+  }
+  .navbarLink {
+    right: 10rem;
+  }
+  .navbarLinkList.mobile {
+    right: -10rem;
+  }
+  .contactForm .contactFormInput input {
+    width: 16rem;
+  }
+  .contactForm .contactFormInput textArea {
+    width: 36rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
   .navbar .sitename {
     left: 5rem;
     width: calc(40% - 5rem);
@@ -918,9 +964,35 @@ body {
   .navbarLinkList.mobile {
     right: -5rem;
   }
+  .contactForm .contactFormInput input {
+    width: 12rem;
+  }
+  .contactForm .contactFormInput textArea {
+    width: 30rem;
+  }
+  iframe {
+    width: 400px;
+    height: 280px;
+  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
+  .contactForm .contactFormInput input {
+    width: 10rem;
+  }
+  .contactForm .contactFormInput textArea {
+    width: 25rem;
+  }
+  iframe {
+    width: 350px;
+    height: 250px;
+  }
+  .contactSlogan h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .navbar .sitename {
     left: 1rem;
     width: 80%;
@@ -930,5 +1002,676 @@ body {
   }
   .navbarLinkList.mobile {
     right: -1rem;
+  }
+
+  .contactUsInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactForm,
+  .companyDetails {
+    width: 100%;
+  }
+  .contactForm .contactFormInput input {
+    width: 18rem;
+  }
+  .contactForm .contactFormInput textArea {
+    width: 36rem;
+  }
+  iframe {
+    width: 600px;
+    height: 450px;
+  }
+  .chooseReasons {
+    width: 100%;
+    .chooseReason {
+      & i {
+        font-size: 3rem;
+      }
+      & h2 {
+        font-size: 1rem;
+      }
+      & p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .survey {
+    height: 50rem;
+    & h2 {
+      font-size: 1.2rem;
+    }
+    & h4 {
+      font-size: 1.5rem;
+    }
+    .surveyQuestions {
+      font-size: 1.2rem;
+      margin: 0.1rem 0;
+      width: 80%;
+    }
+  }
+
+  .stepContainer {
+    @mixin stepNUmber {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 2.5rem;
+      font-size: 1rem;
+    }
+    .stepCurrent {
+      border: 0.15rem solid $themcolor;
+      @include stepNUmber();
+    }
+    .step {
+      border: 0.15rem solid #e0e0e0;
+      @include stepNUmber();
+    }
+    @mixin stepLine {
+      width: 4rem;
+    }
+    .line {
+      @include stepLine();
+    }
+    .lineLink {
+      @include stepLine();
+    }
+  }
+
+  .button_container {
+    width: 80%;
+    @mixin stepBtn {
+      width: 6rem;
+      height: 2.5rem;
+      font-size: 1rem;
+    }
+    .step_button {
+      @include stepBtn();
+    }
+    .step_button_active {
+      @include stepBtn();
+    }
+  }
+
+  .article {
+    width: 90%;
+    & h2 {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      -webkit-text-stroke: 0.8px $themcolor;
+    }
+    & p {
+      font-size: 1rem;
+    }
+  }
+
+  .workWithReasons {
+    height: 40rem;
+    .subTitle {
+      font-size: 1.2rem;
+    }
+    .workWithReasonsQuestion {
+      font-size: 1.5rem;
+    }
+    .workWithReasonCtn {
+      .workWithReason {
+        & i {
+          font-size: 3rem;
+        }
+        & h2 {
+          font-size: 1rem;
+        }
+        & p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .socialMedia {
+    width: 90%;
+    height: 18rem;
+    @mixin socialMediaMargin {
+      margin: 1rem;
+    }
+    .twitterlogo {
+      @include socialMediaMargin;
+    }
+    .youtubelogo {
+      @include socialMediaMargin;
+    }
+    .facebooklogo {
+      @include socialMediaMargin;
+    }
+    .twitterFollowers,
+    .youtubeFollowers,
+    .facebookFollowers {
+      font-size: 2rem;
+      @include socialMediaMargin;
+    }
+    .twitterDes,
+    .youtubeDes,
+    .facebookDes {
+      font-size: 1rem;
+      @include socialMediaMargin;
+    }
+  }
+
+  .contactSlogan h3 {
+    font-size: 1.2rem;
+  }
+
+  .contactSlogan .phoneBtn {
+    height: 4rem;
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+
+  .aboutUsInfo {
+    width: 90%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .teamMembers {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .teamMember {
+    height: 15rem;
+  }
+
+  .teamMemberInfo {
+    padding: 0 1rem;
+
+    & .teamMemberName {
+      font-size: 1.5rem;
+    }
+    & .teamMemberTitle {
+      font-size: 1rem;
+      &::before {
+        font-size: 0.8rem;
+      }
+    }
+    & .teamMemberLinkedin,
+    & .teamMemberBlog,
+    & .teamMemberGithub {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactForm .contactFormInput input {
+    width: 12rem;
+  }
+  .contactForm .contactFormInput textArea {
+    width: 30rem;
+  }
+  iframe {
+    width: 400px;
+    height: 280px;
+  }
+
+  .navbar .sitename {
+    font-size: 1.5rem;
+    width: 55%;
+  }
+
+  .navbarLink {
+    right: 1rem;
+    width: 40%;
+  }
+
+  .picContainer {
+    height: 18rem;
+    background-position: 100% 100%;
+
+    & h1 {
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+    }
+    & h2 {
+      font-size: 1.5rem;
+      line-height: 0.8rem;
+      margin-bottom: 0.2rem;
+    }
+    & p {
+      font-size: 1rem;
+      line-height: 0.8rem;
+    }
+  }
+
+  .quoteBtn {
+    width: 12rem;
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+
+  .survey {
+    height: 45rem;
+    & h2 {
+      font-size: 1rem;
+    }
+    & h4 {
+      font-size: 1.2rem;
+    }
+    .surveyQuestions {
+      font-size: 1rem;
+    }
+  }
+
+  .stepContainer {
+    @mixin stepNUmber {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+    }
+    .stepCurrent {
+      @include stepNUmber();
+    }
+    .step {
+      @include stepNUmber();
+    }
+    @mixin stepLine {
+      width: 3rem;
+    }
+    .line {
+      @include stepLine();
+    }
+    .lineLink {
+      @include stepLine();
+    }
+  }
+
+  .button_container {
+    @mixin stepBtn {
+      width: 5rem;
+      height: 2rem;
+      font-size: 0.8rem;
+    }
+    .step_button {
+      @include stepBtn();
+    }
+    .step_button_active {
+      @include stepBtn();
+    }
+  }
+
+  .article {
+    & h2 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      -webkit-text-stroke: 0.5px $themcolor;
+    }
+    & p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .workWithReasons {
+    height: 35rem;
+    .subTitle {
+      font-size: 1rem;
+    }
+    .workWithReasonsQuestion {
+      font-size: 1.2rem;
+    }
+    .workWithReasonCtn {
+      .workWithReason {
+        & i {
+          font-size: 2.5rem;
+        }
+        & h2 {
+          font-size: 0.8rem;
+        }
+        & p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .socialMedia {
+    height: 18rem;
+    @mixin socialMediaMargin {
+      margin: 1rem;
+    }
+    .twitterlogo {
+      @include socialMediaMargin;
+    }
+    .youtubelogo {
+      @include socialMediaMargin;
+    }
+    .facebooklogo {
+      @include socialMediaMargin;
+    }
+    .twitterFollowers,
+    .youtubeFollowers,
+    .facebookFollowers {
+      font-size: 1.5rem;
+      @include socialMediaMargin;
+    }
+    .twitterDes,
+    .youtubeDes,
+    .facebookDes {
+      font-size: 0.8rem;
+      @include socialMediaMargin;
+    }
+  }
+
+  .contactSlogan h3 {
+    font-size: 1rem;
+  }
+
+  .contactSlogan .phoneBtn {
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.2rem;
+  }
+
+  .contentDescBlock {
+    width: 90%;
+    margin: 1rem auto;
+    & h3 {
+      font-size: 1.5rem;
+    }
+    & h2 {
+      font-size: 1rem;
+    }
+    .contentDescDetail {
+      display: flex;
+      flex-direction: column;
+      & h4 {
+        font-size: 1rem;
+      }
+      & p {
+        font-size: 0.8rem;
+      }
+      & div {
+        width: 100%;
+        padding: 0rem;
+        & ul {
+          padding-inline-start: 0px;
+          list-style: none;
+          font-size: 0.8rem;
+        }
+      }
+      .contactUsBtn {
+        width: 100%;
+        height: 2.5rem;
+        & a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .contentPic {
+    margin: 1rem auto;
+    width: 100%;
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .foot {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contactForm .contactFormInput input {
+    width: 8rem;
+  }
+  .contactForm .contactFormInput textArea {
+    width: 18rem;
+  }
+  iframe {
+    width: 300px;
+    height: 200px;
+  }
+  .navbar .sitename {
+    font-size: 1.2rem;
+    width: 55%;
+  }
+
+  .navbarLink {
+    font-size: 1rem;
+    .navDropdownList li a {
+      font-size: 1rem;
+    }
+  }
+
+  .picContainer {
+    height: 15rem;
+    background-position: 100% 100%;
+
+    & h1 {
+      font-size: 1.2rem;
+      letter-spacing: 0rem;
+    }
+    & h2 {
+      font-size: 1rem;
+      line-height: 0rem;
+      margin-bottom: 0rem;
+    }
+    & p {
+      width: 90%;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+    }
+  }
+
+  .quoteBtn {
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+  }
+
+  .chooseReasons {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: 40rem;
+  }
+
+  .survey {
+    & h2 {
+      font-size: 1rem;
+    }
+    & h4 {
+      font-size: 1rem;
+    }
+    .surveyQuestions {
+      font-size: 1rem;
+    }
+  }
+
+  .stepContainer {
+    @mixin stepLine {
+      width: 1.5rem;
+    }
+    .line {
+      @include stepLine();
+    }
+    .lineLink {
+      @include stepLine();
+    }
+  }
+
+  .contactForm {
+    margin: 0;
+    & h2 {
+      font-size: 1.2rem;
+    }
+    & p {
+      font-size: 0.8rem;
+    }
+
+    & .contactFormInput {
+      font-size: 0.8rem;
+      & label {
+        margin-bottom: 0.5rem;
+        &::after {
+          margin-left: 0.2rem;
+        }
+      }
+
+      & input {
+        width: 20rem;
+        font-size: 0.8rem;
+      }
+
+      & textArea {
+        width: 20rem;
+        font-size: 0.8rem;
+      }
+
+      & fieldset {
+        flex-direction: column;
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  .companyDetails {
+    margin: 0;
+    & h2 {
+      font-size: 1.2rem;
+    }
+    & p {
+      font-size: 0.8rem;
+    }
+    & a {
+      text-decoration: none;
+      color: $themcolor;
+    }
+  }
+
+  .article {
+    & h2 {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      -webkit-text-stroke: 0.5px $themcolor;
+    }
+    & p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .workWithReasons {
+    padding: 0 1%;
+    height: 55rem;
+    .workWithReasonCtn {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .workWithReason {
+        width: 90%;
+        height: 15rem;
+        margin: 0;
+        padding-top: 0rem;
+        justify-content: center;
+      }
+    }
+  }
+
+  .socialMedia {
+    height: 15rem;
+    @mixin socialMediaMargin {
+      margin: 0.8rem;
+    }
+    .twitterlogo {
+      @include socialMediaMargin;
+    }
+    .youtubelogo {
+      @include socialMediaMargin;
+    }
+    .facebooklogo {
+      @include socialMediaMargin;
+    }
+    .twitterFollowers,
+    .youtubeFollowers,
+    .facebookFollowers {
+      font-size: 1rem;
+      @include socialMediaMargin;
+    }
+    .twitterDes,
+    .youtubeDes,
+    .facebookDes {
+      text-align: center;
+      font-size: 0.8rem;
+      @include socialMediaMargin;
+    }
+  }
+
+  .contactSlogan {
+    height: 10rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactSlogan h3 {
+    font-size: 0.8rem;
+  }
+
+  .contactSlogan .phoneBtn {
+    height: 3rem;
+    width: 8rem;
+    font-size: 0.8rem;
+  }
+
+  .aboutUsInfo {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem;
+    line-height: 1rem;
+  }
+
+  .teamMembers {
+    width: 90%;
+  }
+
+  .teamMember {
+    height: 10rem;
+    margin: 0.5rem;
+    .avatar {
+      border: 0.2rem solid #2a2a72;
+      height: 5rem;
+      width: 5rem;
+      margin: 0.5rem;
+    }
+  }
+
+  .teamMemberInfo {
+    padding: 0 0.5rem;
+    & .teamMemberName {
+      font-size: 1.2rem;
+    }
+    & .teamMemberTitle {
+      font-size: 1rem;
+      &::before {
+        font-size: 0.8rem;
+      }
+    }
+    & .teamMemberLinkedin,
+    & .teamMemberBlog,
+    & .teamMemberGithub {
+      font-size: 1.2rem;
+    }
+  }
+
+  .foot {
+    margin-top: 1.2rem;
+    font-size: 1rem;
   }
 }

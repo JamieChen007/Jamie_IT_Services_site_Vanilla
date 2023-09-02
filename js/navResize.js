@@ -3,7 +3,6 @@ const navMobileBtn = document.querySelector(".navMobileBtn");
 const picContainer = document.querySelector(".picContainer");
 
 const resizeFn = () => {
-  console.log("change size", window.innerWidth);
   const currentWidth = window.innerWidth;
   if (currentWidth < 1000) {
     navbarLinkList.classList.add("hide");
