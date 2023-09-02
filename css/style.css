@@ -111,7 +111,7 @@ body {
 }
 .navbarLink .navbarLinkList.mobile .navLinkListCtn,
 .navbarLink .navbarLinkList.mobile .navdropdownContainer {
-  height: 3rem;
+  height: 2.5rem;
   width: 10rem;
   margin: 0;
   padding: 0;
@@ -1387,6 +1387,9 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 40rem;
+  }
+  .chooseReasons .chooseReason {
+    height: 33.33%;
   }
   .survey h2 {
     font-size: 1rem;
