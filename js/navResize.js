@@ -1,6 +1,7 @@
 const navbarLinkList = document.querySelector(".navbarLinkList");
 const navMobileBtn = document.querySelector(".navMobileBtn");
 const picContainer = document.querySelector(".picContainer");
+const navbarBlock = document.querySelector(".navbar");
 
 const resizeFn = () => {
   const currentWidth = window.innerWidth;
@@ -25,5 +26,10 @@ navMobileBtn.addEventListener("click", () => {
     picContainer.style.marginTop = "18rem";
   } else {
     picContainer.style.marginTop = "8rem";
+  }
+  if (navbarBlock.classList.contains("active")) {
+    navbarLinkList.style.top = "6rem";
+  } else {
+    navbarLinkList.style.top = "8rem";
   }
 });
