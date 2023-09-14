@@ -254,7 +254,7 @@ body {
   justify-content: center;
   align-items: center;
   color: $colorwht;
-  z-index: -1;
+  z-index: 0;
   &::before {
     width: 100%;
     height: 100%;
