@@ -134,7 +134,8 @@ body {
   margin: 0.5rem;
   padding: 0 0.3rem;
 }
-.navbarLink a:hover, .navbarLink a:active {
+.navbarLink a:hover,
+.navbarLink a:active {
   color: black;
 }
 .navbarLink .navbarChosen {
@@ -183,7 +184,7 @@ body {
   width: 30rem;
   height: 800px;
   -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
   visibility: hidden;
 }
 .navDropdownList li {
@@ -249,6 +250,7 @@ body {
   align-items: center;
   color: white;
   z-index: 0;
+  transition: margin-top 0.8s ease-in-out;
 }
 .picContainer::before {
   width: 100%;
@@ -299,7 +301,8 @@ body {
   transition: all 0.2s ease-in-out;
   z-index: 1;
 }
-.quoteBtn:active, .quoteBtn:hover {
+.quoteBtn:active,
+.quoteBtn:hover {
   background: #337ab7;
 }
 
@@ -519,7 +522,9 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.teamMemberInfo .teamMemberLinkedin, .teamMemberInfo .teamMemberBlog, .teamMemberInfo .teamMemberGithub {
+.teamMemberInfo .teamMemberLinkedin,
+.teamMemberInfo .teamMemberBlog,
+.teamMemberInfo .teamMemberGithub {
   font-size: 2rem;
   color: #0a66c2;
   margin: 0.3rem;
@@ -574,7 +579,8 @@ body {
   cursor: pointer;
   text-transform: capitalize;
 }
-.contactForm .contactFormInput .formSubmit input:hover, .contactForm .contactFormInput .formSubmit input:active {
+.contactForm .contactFormInput .formSubmit input:hover,
+.contactForm .contactFormInput .formSubmit input:active {
   background-color: #02415c;
 }
 .contactForm .contactFormInput input {
@@ -683,7 +689,8 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-.contactSlogan .phoneBtn:hover, .contactSlogan .phoneBtn:active {
+.contactSlogan .phoneBtn:hover,
+.contactSlogan .phoneBtn:active {
   background-color: rgba(62, 190, 233, 0.7);
 }
 .contactSlogan .phoneBtn a {
@@ -884,7 +891,8 @@ body {
   color: white;
   text-transform: capitalize;
 }
-.contentDescBlock .contentDescDetail .contactUsBtn:hover, .contentDescBlock .contentDescDetail .contactUsBtn:active {
+.contentDescBlock .contentDescDetail .contactUsBtn:hover,
+.contentDescBlock .contentDescDetail .contactUsBtn:active {
   background-color: #015b86;
 }
 
@@ -986,7 +994,7 @@ body {
     flex-direction: column;
   }
   .contactForm,
-.companyDetails {
+  .companyDetails {
     width: 100%;
   }
   .contactForm .contactFormInput input {
@@ -1101,14 +1109,14 @@ body {
     margin: 1rem;
   }
   .socialMedia .twitterFollowers,
-.socialMedia .youtubeFollowers,
-.socialMedia .facebookFollowers {
+  .socialMedia .youtubeFollowers,
+  .socialMedia .facebookFollowers {
     font-size: 2rem;
     margin: 1rem;
   }
   .socialMedia .twitterDes,
-.socialMedia .youtubeDes,
-.socialMedia .facebookDes {
+  .socialMedia .youtubeDes,
+  .socialMedia .facebookDes {
     font-size: 1rem;
     margin: 1rem;
   }
@@ -1146,7 +1154,9 @@ body {
   .teamMemberInfo .teamMemberTitle::before {
     font-size: 0.8rem;
   }
-  .teamMemberInfo .teamMemberLinkedin, .teamMemberInfo .teamMemberBlog, .teamMemberInfo .teamMemberGithub {
+  .teamMemberInfo .teamMemberLinkedin,
+  .teamMemberInfo .teamMemberBlog,
+  .teamMemberInfo .teamMemberGithub {
     font-size: 1.5rem;
   }
 }
@@ -1270,14 +1280,14 @@ body {
     margin: 1rem;
   }
   .socialMedia .twitterFollowers,
-.socialMedia .youtubeFollowers,
-.socialMedia .facebookFollowers {
+  .socialMedia .youtubeFollowers,
+  .socialMedia .facebookFollowers {
     font-size: 1.5rem;
     margin: 1rem;
   }
   .socialMedia .twitterDes,
-.socialMedia .youtubeDes,
-.socialMedia .facebookDes {
+  .socialMedia .youtubeDes,
+  .socialMedia .facebookDes {
     font-size: 0.8rem;
     margin: 1rem;
   }
@@ -1315,7 +1325,7 @@ body {
   }
   .contentDescBlock .contentDescDetail div ul {
     -webkit-padding-start: 0px;
-            padding-inline-start: 0px;
+    padding-inline-start: 0px;
     list-style: none;
     font-size: 0.8rem;
   }
@@ -1487,14 +1497,14 @@ body {
     margin: 0.8rem;
   }
   .socialMedia .twitterFollowers,
-.socialMedia .youtubeFollowers,
-.socialMedia .facebookFollowers {
+  .socialMedia .youtubeFollowers,
+  .socialMedia .facebookFollowers {
     font-size: 1rem;
     margin: 0.8rem;
   }
   .socialMedia .twitterDes,
-.socialMedia .youtubeDes,
-.socialMedia .facebookDes {
+  .socialMedia .youtubeDes,
+  .socialMedia .facebookDes {
     text-align: center;
     font-size: 0.8rem;
     margin: 0.8rem;
@@ -1543,7 +1553,9 @@ body {
   .teamMemberInfo .teamMemberTitle::before {
     font-size: 0.8rem;
   }
-  .teamMemberInfo .teamMemberLinkedin, .teamMemberInfo .teamMemberBlog, .teamMemberInfo .teamMemberGithub {
+  .teamMemberInfo .teamMemberLinkedin,
+  .teamMemberInfo .teamMemberBlog,
+  .teamMemberInfo .teamMemberGithub {
     font-size: 1.2rem;
   }
   .foot {
