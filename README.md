@@ -1,4 +1,4 @@
-# Jamie IT Services Site REACT version
+# Jamie IT Services Site native 'HTML+CSS+JS' version
 
 This is a Jamie IT Services Site native 'HTML+CSS+JS' version.
 
